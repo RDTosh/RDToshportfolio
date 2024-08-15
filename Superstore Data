@@ -1,0 +1,24 @@
+#All items sold from highest price to lowest price.
+
+Select *
+FROM superstore
+Order by price desc;
+
+#What is the average price of a sale in the Electronics category
+
+Select AVG(price),'Electronics'
+FROM superstore
+WHERE category='Electronics';
+
+#Total sales of Kitchen Supplies
+
+SELECT SUM(price),'Kitchen Supplies'
+FROM superstore
+WHERE category='Kitchen Supplies';
+
+#How many air purfiers are in stock.
+
+SELECT SUM(stock_quantity), 'Air Purifier'
+FROM superstore
+WHERE item_name='Air Purifier';
+
